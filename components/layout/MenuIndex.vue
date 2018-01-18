@@ -41,7 +41,7 @@ export default {
     left: 0;
     bottom: 0;
     background-color: $secondary-color;
-    transform: translateX(-100%);
+    transform: translateX(-101%);
     box-sizing: border-box;
     transition: 0.3s ease-in-out;
     z-index: -1;
