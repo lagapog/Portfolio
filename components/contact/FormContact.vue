@@ -11,7 +11,7 @@ form(
   )
   mpTxtArea
   input(type='hidden', name='_next' value='//www.luisagapito.com/thanks')
-  button.btn.my-4(type='submit') Submit
+  button.btn.my-4(type='submit') Enviar
 </template>
 <script>
 import mpInputGroup from '~/components/contact/InputGroup.vue'
