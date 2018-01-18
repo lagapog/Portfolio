@@ -10,7 +10,7 @@ form(
     :ci='c'
   )
   mpTxtArea
-  input(type='hidden', name='_next' value='//localhost:3000/thanks')
+  input(type='hidden', name='_next' value='//www.luisagapito.com/thanks')
   button.btn.my-4(type='submit') Submit
 </template>
 <script>

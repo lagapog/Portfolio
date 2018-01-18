@@ -14,14 +14,10 @@ module.exports = {
     ],
     link: [
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Raleway' },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'shorcut icon', type: 'image/x-icon', href: 'favicon.ico' },
       { rel: 'apple-touch-icon', sizes: '57x57', href: '/apple-touch-icon-57x57.png' },
       { rel: 'apple-touch-icon', sizes: '114x114', href: '/apple-touch-icon-114x114.png' }
     ]
-  },
-  router: {
-    linkActiveClass: 'active',
-    base: '/'
   },
   /*
   ** Customize the progress bar color
