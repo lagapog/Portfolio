@@ -9,6 +9,7 @@ module.exports = {
     title: 'Luis Agapito',
     meta: [
       { charset: 'utf-8' },
+      { name: 'google-site-verification', content: 'qPl1212t8D42Vack6LnZE3XlGtk08DEe1-RwvriytTs' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'My personal webpage on Nuxt.js' }
     ],
