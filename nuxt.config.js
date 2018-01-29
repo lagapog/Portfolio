@@ -19,7 +19,7 @@ module.exports = {
       { rel: 'apple-touch-icon', sizes: '114x114', href: '/apple-touch-icon-114x114.png' }
     ]
   },
-  // Simple usage
+  // Analytics
   modules: [
     ['@nuxtjs/google-analytics', { id: 'UA-113293096-1' }]
   ],
