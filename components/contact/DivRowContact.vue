@@ -1,6 +1,8 @@
 <template lang="pug">
-  .row.my-4.align-items-start.justify-content-center(
+  b-row.my-4(
     v-scroll-reveal={ reset: true }
+    align-v='start',
+    align-h='center'
   )
     slot
 </template>

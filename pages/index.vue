@@ -42,8 +42,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~assets/css/main';
-
 #index {
   height: 60vh;
 }

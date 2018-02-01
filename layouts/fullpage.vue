@@ -1,20 +1,11 @@
 <template lang="pug">
-    .container.thanks.align-items-center.justify-content-center
-      nuxt
+  b-container.bv-example-row.bv-example-row-flex-cols(fluid)
+    b-row.h-100(align-v='center', align-h='center')
+      b-col(cols='12', md='10', xl='8')
+        nuxt
 </template>
-<script>
-export default {
-}
-</script>
-
-<style lang="scss">
-@import '~assets/css/main';
-
-body {
-  background: $primary-color;
-}
-.container.thanks {
-  display: flex;
+<style lang="scss" scoped>
+.container-fluid {
   height: 100vh;
 }
 </style>

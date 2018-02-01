@@ -1,16 +1,19 @@
 <template lang="pug">
-.col-12.col-md-3.col-xl-2.text-center.my-2(
-  v-scroll-reveal={ reset: true, viewFactor: 0.5 }
-)
-  vue-is-visible(event="isVisible", @isVisible="setAnimatedPercent")
-    h6 {{ name }}
-    vm-progress(
-      type='circle',
-      :stroke-width='10',
-      stroke-color='#FFA13C',
-      track-color='#FFA13C22',
-      :percentage='animatedPercent'
-    ) {{ animatedPercent }} %
+  b-col.text-center.my-2(
+    v-scroll-reveal={ reset: true, viewFactor: 0.4 },
+    cols='12',
+    md='3',
+    xl='2'
+  )
+    vue-is-visible(event="isVisible", @isVisible="setAnimatedPercent")
+      h6 {{ name }}
+      vm-progress(
+        type='circle',
+        :stroke-width='10',
+        stroke-color='#FFA13C',
+        track-color='#FFA13C22',
+        :percentage='animatedPercent'
+      ) {{ animatedPercent }} %
 </template>
 
 <script>
@@ -61,6 +64,6 @@ export default {
   transition: all .4s;
 }
 .vm-progress--circle:hover .vm-progress__text{
-    transform: scale(1.5) translateY(-5px);
-  }
+  transform: scale(1.5) translateY(-5px);
+}
 </style>

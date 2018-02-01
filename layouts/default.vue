@@ -41,10 +41,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-@import '~assets/css/main';
-body {
-  background: $primary-color;
-}
-</style>

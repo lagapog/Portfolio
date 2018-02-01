@@ -1,8 +1,8 @@
 <template lang="pug">
-.row.justify-content-center.align-items-center
-  .col-12.text-center
+b-row(align-h='center', align-v='center')
+  b-col.text-center(cols='12')
     h1.h1 Luis Agapito - Desarrollador
-  .col-12.col-md-8.col-xl-6.content
+  b-col.content(cols='12', md='8', xl='6')
     .content-text
     ul.content-list
       li.content-list-item(v-for='g in greetings', :key='g.id') {{ g.text }}

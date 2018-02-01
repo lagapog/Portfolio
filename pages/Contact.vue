@@ -1,22 +1,18 @@
 <template lang="pug">
 section#contact
   mpTitle(titulo='CONTACTO')
-  mpDivRowContact.my-4
-    .col-12.col-lg-6
+  mpDivRowContact
+    b-col(cols='12', lg='6')
       p.lead ¿Tienes una idea o proyecto en mente? Puedes contar conmigo, 
         | Descríbeme que planeas hacer y to responderé a la brevedad. 
         | ¡No lo pienses más!
       img.rocket(src='~/assets/images/rocket.svg')
-    .col-12.col-lg-6
+    b-col(cols='12', lg='6')
       mpFormContact
-      small Este formulario utiliza los servicios de 
-        a(href='https://formspree.io', target='_blank') formspree 
-        | para enviar los datos
-  mpDivRowContact.my-3
-    .col-12
-      h4 ... o también puedes escribirme a mi correo personal
-      a(href='mailto:luisagapito.g@gmail.com', target='_blank')
-        span.form-text.text-muted luisagapito.g@gmail.com
+  mpDivRowContact
+    b-col(cols='12')
+      h4 ... o también puedes escribirme a mi correo personal 
+        a(href='mailto:luisagapito.g@gmail.com', target='_blank') luisagapito.g@gmail.com
 </template>
 <script>
 import mpFormContact from '~/components/contact/FormContact.vue'
@@ -49,14 +45,10 @@ img.rocket {
 a:hover {
   text-decoration: none;
 }
-.form-text.text-muted {
-  display: inline-block;
-}
-a, .form-text.text-muted {
-  margin: 1.5em 0;
-  color: $button-color !important;
+a {
+  color: $white-color;
   &:hover {
-    color: $dark-color !important;
+    color: $logo-color;
   }
 }
 @keyframes rocketear {

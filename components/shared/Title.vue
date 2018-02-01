@@ -1,8 +1,10 @@
 <template lang="pug">
-  .row.my-3.align-items-center.justify-content-center(
-    v-scroll-reveal={ reset: true, viewFactor: 0.3 }
+  b-row.my-3(
+    v-scroll-reveal={ duration: 1000, reset: true, viewFactor: 0.3 },
+    align-v='center',
+    align-h='center',
   )
-    .col-12.text-center
+    b-col.text-center(cols='12')
       h2 {{ titulo }}
 </template>
 <script>
@@ -15,7 +17,7 @@ export default {
 @import '~assets/css/variables';
 
 h2 {
-  letter-spacing: .5em;
-  color: $button-color;
+  letter-spacing: .5rem;
+  color: $logo-color;
 }
 </style>

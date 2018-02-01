@@ -1,7 +1,7 @@
 <template lang="pug">
-.col-2.col-xl-1.text-center
-  a(:href='link', target='_blank')
-    icon(:name='name')
+  b-col.text-center(cols='2', xl='1')
+    a(:href='link', target='_blank')
+      icon(:name='name')
 </template>
 <script>
 export default {

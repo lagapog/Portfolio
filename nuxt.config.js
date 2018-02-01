@@ -62,12 +62,13 @@ module.exports = {
       }
     }
   },
+  css: [ '@/assets/css/main.scss' ],
   plugins: [
-    { src: '~plugins/vue-awesome.js', ssr: true },
-    { src: '~plugins/vue-is-visible.js', ssr: false },
-    { src: '~plugins/vue-multiple-progress.js', ssr: false },
-    { src: '~plugins/vue-scroll-reveal.js', ssr: false },
-    { src: '~plugins/vee-validate.js', ssr: true },
-    { src: '~plugins/vue-notifications.js', ssr: false }
+    { src: '~/plugins/vue-awesome.js', ssr: true },
+    { src: '~/plugins/vue-is-visible.js', ssr: false },
+    { src: '~/plugins/vue-multiple-progress.js', ssr: false },
+    { src: '~/plugins/vue-scroll-reveal.js', ssr: false },
+    { src: '~/plugins/vee-validate.js', ssr: true },
+    { src: '~/plugins/vue-notifications.js', ssr: false }
   ]
 }

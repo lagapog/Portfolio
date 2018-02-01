@@ -1,8 +1,9 @@
 <template lang="pug">
-  .row.justify-content-center.redes(
-    v-scroll-reveal={ reset: true }
+  b-row.redes(
+    v-scroll-reveal={ duration: 1000, reset: true, viewFactor: 0.3 },
+    align-h='center'
   )
-    .col-12.text-center.text-lg-left
+    b-col.text-center.text-lg-left(cols='12')
       h3.my-3 Puedes encontrarme en:
     mpIconSocialNet(
       v-for='s in socials',
@@ -12,8 +13,8 @@
     )
 </template>
 <script>
-import { mapState } from 'vuex'
 import mpIconSocialNet from '~/components/about/IconSocialNet.vue'
+import { mapState } from 'vuex'
 
 export default {
   name: 'mpSocialNet',

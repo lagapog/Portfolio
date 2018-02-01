@@ -21,7 +21,7 @@ section#about
     p.lead.text-justify En mis tiempos libres, si no estoy enganchado con alguna 
       | serie o ánime, me gusta practicar fotografía y jugar fútbol 
       | (no al mismo tiempo, obviamente)
-  mpSkills()
+  mpSkills
   mpSocialNet
 </template>
 <script>
@@ -47,7 +47,7 @@ export default {
 }
 .text-auxiliar {
   text-decoration: none;
-  color: $button-color;
+  color: $logo-color;
   font-weight: bold;
 }
 </style>

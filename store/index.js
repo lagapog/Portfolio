@@ -81,17 +81,18 @@ const createStore = () => {
         }
       ],
       skills: [
-        {item: 1, name: 'HTML5', percent: '90'},
-        {item: 2, name: 'CSS3', percent: '80'},
+        {item: 1, name: 'HTML5', percent: '100'},
+        {item: 2, name: 'CSS3', percent: '95'},
         {item: 3, name: 'SCSS/LESS', percent: '75'},
         {item: 4, name: 'JAVASCRIPT', percent: '80'},
         {item: 5, name: 'JQUERY', percent: '75'},
-        {item: 6, name: 'BOOTSRAP', percent: '75'},
-        {item: 7, name: 'FOUNDATION', percent: '60'},
-        {item: 8, name: 'VUE.JS', percent: '70'},
+        {item: 6, name: 'BOOTSRAP', percent: '95'},
+        {item: 7, name: 'FOUNDATION', percent: '75'},
+        {item: 8, name: 'VUE.JS', percent: '90'},
         {item: 9, name: 'SQL', percent: '65'},
         {item: 10, name: 'REACT.JS', percent: '40'},
-        {item: 11, name: 'PHP', percent: '35'}
+        {item: 11, name: 'PHP', percent: '55'},
+        {item: 12, name: 'WORDPRESS', percent: '40'}
       ],
       socials: [
         {item: 1, name: 'facebook', link: 'https://www.facebook.com/luisagapito.dev/'},

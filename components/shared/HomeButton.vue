@@ -1,8 +1,8 @@
 <template lang="pug">
   .button-fixed
-    nuxt-link.btn.btn-lg.rounded-circle(
-      type='button',
-      tag='button',
+    b-button.rounded-circle(
+      size='lg',
+      variant='outline-primary',
       :to='homeItemButton.link',
       exact
     )
@@ -17,21 +17,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import '~assets/css/main';
-
 .button-fixed {
   position: fixed;
   bottom: 30px;
   right: 5vw;
-}
-.btn.btn-lg{
-  color: $primary-color;
-  background-color: $button-alpha-color;
-  &:hover{
-    background-color: $button-color;
-  }
-  &:active {
-    animation: clickear .3s;
-  }
 }
 </style>

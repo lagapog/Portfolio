@@ -1,8 +1,8 @@
 <template lang="pug">
 no-ssr
-  .row.my-4.align-items-center.justify-content-center
-    .col-12.text-center.text-lg-left
-      h3.mb-4 Mis Habilidades    
+  b-row.my-4(align-v='center', align-h='center')
+    b-col.text-center.text-lg-left(cols='12')
+      h3.mb-4 Mis Habilidades
     mpProgress(
       v-for='s in skills',
       :key='s.item',
@@ -20,6 +20,3 @@ export default {
   computed: mapState([ 'skills' ])
 }
 </script>
-<style lang="scss">
-
-</style>

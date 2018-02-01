@@ -1,16 +1,19 @@
 <template lang="pug">
-.col-10.col-sm-8.col-md-6.col-lg-4.text-center.my-4(
-  v-scroll-reveal={ reset: true }
-)
-  .tarjeta
-    .tarjeta-image(:style="{ 'background-image': 'url('+ proj.image + ')'}")
-    .tarjeta-cuerpo.d-flex.justify-content-center.flex-column
-      h5.text-center.my-2 {{ proj.name }}
-      p.text-center.m-2 {{ proj.description }}
-      .tarjeta-tags
-        small.badge.badge-pill(v-for='t in proj.tags') {{ t }}
-  a.tarjeta-boton(:href='proj.link', target='_blank') 
-    icon(name='link') 
+  b-col.text-center.my-4(
+    cols='10',
+    sm='8',
+    md='6',
+    lg='4',
+    v-scroll-reveal={ reset: true })
+    .tarjeta
+      .tarjeta-image(:style="{ 'background-image': 'url('+ proj.image + ')'}")
+      .tarjeta-cuerpo.d-flex.justify-content-center.flex-column
+        h5.text-center.my-2 {{ proj.name }}
+        p.text-center.m-2 {{ proj.description }}
+        .tarjeta-tags
+          small.badge.badge-pill(v-for='t in proj.tags') {{ t }}
+    a.tarjeta-boton(:href='proj.link', target='_blank') 
+      icon(name='link') 
 </template>
 <script>
 export default {

@@ -1,17 +1,17 @@
 <template lang="pug">
-form(
-  @submit.prevent="validateBeforeSubmit",
-  action='https://formspree.io/agapo.91@gmail.com',
-  method='POST'
-)
-  mpInputGroup(
-    v-for='c in contactInputs',
-    :key='c.item',
-    :ci='c'
+  b-form(
+    @submit.prevent="validateBeforeSubmit",
+    action='https://formspree.io/agapo.91@gmail.com',
+    method='POST'
   )
-  mpTxtArea
-  input(type='hidden', name='_next' value='//www.luisagapito.com/thanks')
-  button.btn.my-4(type='submit') Enviar
+    mpInputGroup(
+      v-for='c in contactInputs',
+      :key='c.item',
+      :ci='c'
+    )
+    mpTxtArea
+    input(type='hidden', name='_next' value='//www.luisagapito.com/thanks')
+    b-button.my-4(variant='outline-primary', type='submit') Enviar
 </template>
 <script>
 import mpInputGroup from '~/components/contact/InputGroup.vue'
@@ -41,19 +41,3 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-@import '~assets/css/variables';
-
-button.btn {
-  background-color: $primary-color;
-  border: 1px solid $button-color; 
-  color: $button-color;
-  transition: all .3s;
-
-  &:hover {
-    background-color: $button-color;
-    color: $primary-color;
-    border-color: transparent;
-  }
-}
-</style>

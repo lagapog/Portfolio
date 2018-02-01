@@ -1,8 +1,8 @@
 <template lang="pug">
 section#projects
   mpTitle(titulo='PROYECTOS')
-  .row.justify-content-center
-      mpProject(v-for='p in projects', :key='p.item', :proj='p')
+  b-row(align-h='center')
+    mpProject(v-for='p in projects', :key='p.item', :proj='p')
 </template>
 <script>
 import mpProject from '~/components/projects/Project.vue'
