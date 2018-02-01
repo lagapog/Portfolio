@@ -1,15 +1,16 @@
 <template lang="pug">
-.col-10.col-sm-8.col-md-6.col-lg-4.my-4
+.col-10.col-sm-8.col-md-6.col-lg-4.text-center.my-4(
+  v-scroll-reveal={ reset: true }
+)
   .tarjeta
-    .tarjeta-image
-      img(:src="require(`~/assets/images/${proj.image}`)")
-    .tarjeta-cuerpo
-      h5.tarjeta-titulo {{ proj.name }}
-      p.tarjeta-texto {{ proj.description }}
+    .tarjeta-image(:style="{ 'background-image': 'url('+ proj.image + ')'}")
+    .tarjeta-cuerpo.d-flex.justify-content-center.flex-column
+      h5.text-center.my-2 {{ proj.name }}
+      p.text-center.m-2 {{ proj.description }}
       .tarjeta-tags
-        small(v-for='t in proj.tags') {{ t }}
-      a.tarjeta-boton(:href='proj.link', target='_blank') Ir al proyecto 
-        icon(name='arrow-right') 
+        small.badge.badge-pill(v-for='t in proj.tags') {{ t }}
+  a.tarjeta-boton(:href='proj.link', target='_blank') 
+    icon(name='link') 
 </template>
 <script>
 export default {
@@ -24,58 +25,64 @@ export default {
 }
 .tarjeta {
   height: 15em;
-  background-color: #fff;
+  border-radius: 1.5rem 1.5rem 0 0;
   overflow: hidden;
+  position: relative;
   &-image {
-    height: 75%;
+    height: 100%;
     width: 100%;
-    overflow: hidden;
-    img {
-      height: 14em;
-      width: auto;
-      transform: scale(1.1);
-    }
+    background-size: cover;
   }
   &-cuerpo{
-    height: 25%;
-    padding-left: .5em;
-  }
-  &-texto {
-    margin-bottom: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 100%;
   }
   &-tags {
     display: flex;
     justify-content: space-around;
     margin: .5em 0;
     small {
-      background-color: $button-color;
-      text-align: center;
-      font-size: .6em;
-      padding: 0 1em;
-      border-radius: 1.5em;
+      background-color: transparent;
+      border: 1px solid $button-color;
+      color: $button-color;
+      font-size: 1rem;
     }
   }
-  &-boton {
-   color: $button-color;
-   text-decoration: none;
-   &:hover {
-     text-decoration: none;
-     color: $dark-color;
-   }
-  }
-  &:hover &-image{
-    height: 50%;
-    img {
-      filter: blur(2px);
-      transform: scale(1.3);
+  &-boton svg{
+    height: 3rem;
+    width: auto;
+    padding: .6rem;
+    color: $button-color;
+    border: 1px solid $button-color;
+    border-radius: 50%;
+    margin-top: 1rem;
+    &:hover {
+      // text-decoration: none;
+      color: $primary-color;
+      background-color: $button-color;
+      border-color: transparent;
     }
   }
   &:hover &-cuerpo{
-    height: 50%;
+    bottom: 0;
   }
-  &:hover{
-    transform: translate(5px, -5px);
-    box-shadow: -5px 5px 2px $dark-color;
+}
+@media screen and (max-width: 992px) {
+  .tarjeta {
+    height: 19em;
+    &-image {
+      height: 60%;
+    }
+    &-cuerpo{
+      height: 40%;
+      width: 100%;
+      position: initial;
+      background-color: transparent;
+      bottom: 100%;
+    }
   }
 }
 </style>

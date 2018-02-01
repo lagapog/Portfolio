@@ -48,13 +48,13 @@ export default {
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: $dark-color;
+      background-color: $logo-color;
       transform: scaleY(0);
       animation: typing .7s ease .3s forwards;
       &-shadow{
         width: 100%;
         height: 100%;
-        background-color: $gray-color;
+        background-color: $logo-shadow-color;
         position: absolute;
         transform: scale(0)
       }

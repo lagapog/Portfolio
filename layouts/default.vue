@@ -1,5 +1,5 @@
 <template lang="pug">
-  .container
+  b-container(fluid)
     no-ssr
       notifications(group='auth',
         position='bottom right',
@@ -45,6 +45,6 @@ export default {
 <style lang="scss">
 @import '~assets/css/main';
 body {
-  background: radial-gradient($primary-light-color 25%, $primary-color 75%);
+  background: $primary-color;
 }
 </style>

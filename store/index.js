@@ -39,14 +39,14 @@ const createStore = () => {
         }
       ],
       greetings: [
-        {id: 1, text: 'a todos !'},
-        {id: 2, text: 'amigos !'},
-        {id: 3, text: 'Internet !'},
-        {id: 4, text: 'Don José !'},
-        {id: 5, text: 'mundo !'},
-        {id: 6, text: 'invitado !'},
-        {id: 7, text: 'Pepito !'},
-        {id: 8, text: 'Lizi !'}
+        {id: 1, text: 'Páginas web'},
+        {id: 2, text: 'Responsive'},
+        {id: 3, text: 'Frontend'},
+        {id: 4, text: 'Backend'},
+        {id: 5, text: 'Base de datos'},
+        {id: 6, text: 'SQL & NoSQL'},
+        {id: 7, text: 'Apps móviles'},
+        {id: 8, text: 'Javascript'}
       ],
       indexItemsMenu: [
         {item: 1, name: 'Conóceme', link: '/about'},
@@ -59,7 +59,7 @@ const createStore = () => {
           item: 1,
           name: 'High TechSchool',
           description: 'Página de una escuela secundaria',
-          image: 'hightechschool.jpg',
+          image: 'http://aws-website-hightechschool-qnf7i.s3-website-us-east-1.amazonaws.com/images/slide2.jpg',
           tags: ['Jquery', 'Bootstrap', 'ParticleJS'],
           link: 'http://aws-website-hightechschool-qnf7i.s3-website-us-east-1.amazonaws.com/'
         },
@@ -67,9 +67,17 @@ const createStore = () => {
           item: 2,
           name: 'Peru Travel',
           description: 'Página de una empresa del rubro turismo',
-          image: 'perutravel.jpg',
+          image: 'https://s3.amazonaws.com/aws-website-perutravel-3kq2b/images/split1.jpg',
           tags: ['Javascript', 'Materialize'],
           link: 'http://aws-website-perutravel-3kq2b.s3-website-us-east-1.amazonaws.com/'
+        },
+        {
+          item: 3,
+          name: 'Clock',
+          description: 'Blog sobre viajes en el tiempo',
+          image: 'https://raw.githubusercontent.com/agapo91/Clock/master/public/images/cover.jpg',
+          tags: ['PHP', 'MySQL', 'Bootstrap'],
+          link: 'https://github.com/agapo91/Clock'
         }
       ],
       skills: [

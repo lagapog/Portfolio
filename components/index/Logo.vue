@@ -41,11 +41,11 @@ export default {
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: $dark-color;
+      background-color: $logo-color;
       &-shadow{
         width: 100%;
         height: 100%;
-        background-color: $gray-color;
+        background-color: $logo-shadow-color;
         position: absolute;
       }
     }

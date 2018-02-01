@@ -1,9 +1,10 @@
 <template lang="pug">
   .jumbotron.jumbotron-fluid.text-center
     .container
-      h1.display-4 Mensaje enviado satisfactoriamente
+      h1.display-4 Éxito
+      h3 mensaje enviado
       p.lead Me pondré en contacto lo más pronto posible
-      hr.my-4
+      hr.bg-light.my-4
       p.lead
         nuxt-link.btn.btn-lg.btn-outline-primary(
         type='button',
@@ -45,7 +46,6 @@ export default {
   }
   &:hover{
     color: $primary-color;
-    box-shadow: 2px 2px $dark-color;
     background: transparent;
     &:before {
       transform: translateX(0);

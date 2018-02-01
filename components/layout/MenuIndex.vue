@@ -30,8 +30,8 @@ export default {
 .btn.btn-outline-primary {
   position: relative;
   overflow: hidden;
-  color: $secondary-color;
-  border-color: $secondary-color;
+  color: $button-color;
+  border-color: $button-color;
   transition: 0.3s ease-in-out;
   &:before {
     content: '';
@@ -40,7 +40,7 @@ export default {
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: $secondary-color;
+    background-color: $button-color;
     transform: translateX(-101%);
     box-sizing: border-box;
     transition: 0.3s ease-in-out;
@@ -48,7 +48,6 @@ export default {
   }
   &:hover{
     color: $primary-color;
-    box-shadow: 2px 2px $dark-color;
     background: transparent;
     &:before {
       transform: translateX(0);

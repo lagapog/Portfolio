@@ -1,39 +1,33 @@
 <template lang="pug">
-.row.my-3
-  .col-12.col-md-3
-    span {{ skill }}
-  .col-12.col-md-9
-    .progress(style='height: 1.5rem;')
-      .progress-bar(
-        role='progressbar',
-        :style='width',
-        :aria-valuenow='percent',
-        aria-valuemin='0',
-        aria-valuemax='100'
-      )  {{ animatedPercent }}%
-</div>  
+.col-12.col-md-3.col-xl-2.text-center.my-2(
+  v-scroll-reveal={ reset: true, viewFactor: 0.5 }
+)
+  vue-is-visible(event="isVisible", @isVisible="setAnimatedPercent")
+    h6 {{ name }}
+    vm-progress(
+      type='circle',
+      :stroke-width='10',
+      stroke-color='#FFA13C',
+      track-color='#FFA13C22',
+      :percentage='animatedPercent'
+    ) {{ animatedPercent }} %
 </template>
+
 <script>
 import TWEEN from '@tweenjs/tween.js'
 
 export default {
   name: 'mpProgress',
+  props: [ 'name', 'percent' ],
   data () {
     return {
       currentPercent: 0,
       animatedPercent: 0
     }
   },
-  props: {
-    skill: { type: String, required: true },
-    percent: { type: String, required: true }
-  },
-  mounted () {
-    this.currentPercent = this.percent
-  },
-  computed: {
-    width () {
-      return `width: ${this.animatedPercent}%`
+  methods: {
+    setAnimatedPercent () {
+      this.currentPercent = this.percent
     }
   },
   watch: {
@@ -44,26 +38,29 @@ export default {
           requestAnimationFrame(animate)
         }
       }
-
       const tween = new TWEEN.Tween({ tweeningNumber: oldValue })
         .easing(TWEEN.Easing.Cubic.Out)
         .to({ tweeningNumber: newValue }, 2000)
         .onUpdate(function (object) {
           vm.animatedPercent = object.tweeningNumber.toFixed(0)
         })
-      tween.delay(1000)
+      tween.delay(600)
       tween.start()
-
       animate()
     }
   }
 }
 </script>
-<style lang="scss" scoped>
+
+<style lang="scss">
 @import '~assets/css/variables';
 
-.progress-bar {
-  background: $button-color;
-  color: $dark-color;
+.vm-progress__text {
+  color: $white-color;
+  transform-origin: center;
+  transition: all .4s;
 }
+.vm-progress--circle:hover .vm-progress__text{
+    transform: scale(1.5) translateY(-5px);
+  }
 </style>

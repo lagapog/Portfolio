@@ -45,17 +45,15 @@ export default {
 @import '~assets/css/variables';
 
 button.btn {
-  background-color: $button-color;
-  color: $dark-color;
+  background-color: $primary-color;
+  border: 1px solid $button-color; 
+  color: $button-color;
   transition: all .3s;
-    &:hover {
-      background-color: $dark-color;
-      color: white;
-    }
-    &:hover:disabled{
-      background-color: $button-color;
-      color: $dark-color;
-      cursor: not-allowed;
-    }
+
+  &:hover {
+    background-color: $button-color;
+    color: $primary-color;
+    border-color: transparent;
+  }
 }
 </style>

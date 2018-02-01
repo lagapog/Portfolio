@@ -1,5 +1,5 @@
 <template lang="pug">
-  #index
+  section#index
     mpLogoMov(v-if='firstTime', @finished='toEndAnimation')
     mpLogo(v-else)
     transition(name='blink')
@@ -16,13 +16,15 @@ export default {
   transition (to, from) {
     if (!from) return 'slide-down'
     switch (from.name) {
-      case 'About':
+      case 'about':
         return 'slide-left'
-      case 'Projects':
+      case 'projects':
         return 'slide-down'
-      case 'Blogs':
+      case 'blogs':
         return 'slide-down'
-      case 'Contact':
+      case 'contact':
+        return 'slide-right'
+      default:
         return 'slide-right'
     }
   },

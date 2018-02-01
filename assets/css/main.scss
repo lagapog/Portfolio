@@ -11,6 +11,13 @@ body {
 *, *:before, *:after {
   margin: 0;
 }
+h1,h3,h4,h5,h6,p,small,li,label{
+  color: $white-color;
+}
+
+.invalid-feedback {
+  font-size: 85% !important;
+}
 //Querys-text-responsive
 @media screen and (max-width: 576px) {
   html {
@@ -29,13 +36,13 @@ body {
 .slide-down-enter-active,
 .slide-right-enter-active,
 .slide-left-enter-active {
-  transition: all .3s ease;
+  transition: all .5s ease;
 }
 .slide-up-leave-active,
 .slide-down-leave-active,
 .slide-right-leave-active,
 .slide-left-leave-active {
-  transition: all .3s $swiftOut;
+  transition: all .5s $swiftOut;
 }
 .slide-up-enter, .slide-down-leave-to  {
   transform: translateY(100px);
@@ -55,7 +62,7 @@ body {
 }
 //Blink-transition
 .blink-enter-active,.blink-leave-active {
-  transition: all .5s;
+  transition: all .8s;
 }
 .blink-enter,.blink-leave-to {
   opacity: 0;
@@ -67,7 +74,7 @@ body {
 }
 //Menu-transition
 .menu-fade-enter-active, .menu-fade-leave-active {
-  transition: opacity .3s ease;
+  transition: opacity .5s ease;
 }
 .menu-fade-enter, .menu-fade-leave-to {
   opacity: 0;

@@ -2,7 +2,7 @@
   .row.justify-content-center.redes(
     v-scroll-reveal={ reset: true }
   )
-    .col-12.text-lg-center
+    .col-12.text-center.text-lg-left
       h3.my-3 Puedes encontrarme en:
     mpIconSocialNet(
       v-for='s in socials',

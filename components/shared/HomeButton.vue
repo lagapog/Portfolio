@@ -26,10 +26,9 @@ export default {
 }
 .btn.btn-lg{
   color: $primary-color;
-  background-color: $secondary-alpha-color;
+  background-color: $button-alpha-color;
   &:hover{
-    background-color: $secondary-color;
-    box-shadow: 2px 2px $dark-color;
+    background-color: $button-color;
   }
   &:active {
     animation: clickear .3s;

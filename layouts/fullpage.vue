@@ -11,8 +11,7 @@ export default {
 @import '~assets/css/main';
 
 body {
-  background: radial-gradient($primary-light-color 25%, $primary-color 75%);
-  overflow: hidden;
+  background: $primary-color;
 }
 .container.thanks {
   display: flex;

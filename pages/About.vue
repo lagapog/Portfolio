@@ -1,19 +1,13 @@
 <template lang="pug">
-#about
+section#about
   mpTitle(titulo='ACERCA')
-  mpDivRow
-    h1.text-center Luis Agapito, Desarrollador Web
-    h5.text-center Lima, Perú
-  mpDivRow
-    h3.mb-4 Mis Habilidades
-    mpProgress(
-      v-for='s in skills',
-      :key='s.item'
-      :skill='s.name',
-      :percent='s.percent'
-    )
-  mpDivRow
-    h3.my-3 Te cuento...
+  mpDivRowAbout
+    h1.text-center Luis Agapito, Desarrollador
+    div.d-flex.justify-content-center
+      h5.mr-3 Lima, Perú
+      img.flag(src='~/assets/images/flag.jpg')
+  mpDivRowAbout
+    h3.my-3.text-center.text-lg-left Te cuento...
     p.lead.text-justify Soy un desarrollador web. Me siento como pez en el agua 
       span.text-auxiliar resolviendo problemas 
       | y disfruto practicar el 
@@ -27,18 +21,17 @@
     p.lead.text-justify En mis tiempos libres, si no estoy enganchado con alguna 
       | serie o ánime, me gusta practicar fotografía y jugar fútbol 
       | (no al mismo tiempo, obviamente)
+  mpSkills()
   mpSocialNet
 </template>
 <script>
-import mpProgress from '~/components/about/Progress.vue'
+import mpSkills from '~/components/about/Skills.vue'
+import mpDivRowAbout from '~/components/about/DivRowAbout.vue'
 import mpSocialNet from '~/components/about/SocialNet.vue'
 import mpTitle from '~/components/shared/Title.vue'
-import mpDivRow from '~/components/shared/DivRow.vue'
-import { mapState } from 'vuex'
 
 export default {
-  components: { mpProgress, mpSocialNet, mpTitle, mpDivRow },
-  computed: mapState([ 'skills' ]),
+  components: { mpSkills, mpSocialNet, mpTitle, mpDivRowAbout },
   transition: 'slide-right',
   mounted () {
     this.$store.commit('logoFinished')
@@ -47,7 +40,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '~assets/css/variables';
-
+.flag {
+  height: 1.2rem;
+  width: auto;
+  display: block
+}
 .text-auxiliar {
   text-decoration: none;
   color: $button-color;

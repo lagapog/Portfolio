@@ -1,5 +1,5 @@
 <template lang="pug">
-#projects
+section#projects
   mpTitle(titulo='PROYECTOS')
   .row.justify-content-center
       mpProject(v-for='p in projects', :key='p.item', :proj='p')
@@ -19,8 +19,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-#projects {
+section#projects {
   // mientras no haya mas projects
-  height: calc(100vh - 36px);
+  min-height: calc(100vh - 36px);
 }
 </style>

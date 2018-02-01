@@ -23,7 +23,7 @@ a {
     width: 100%;
     height: 2px;
     bottom: -10px;
-    background-color: $dark-color;
+    background-color: $logo-color;
     transform: scaleX(0);
     box-sizing: border-box;
     transition: 0.3s ease-in-out;
@@ -31,13 +31,13 @@ a {
   &:hover:before {
     transform: scaleX(1);
   }
-  svg {
-    color: $button-color;
+  svg.fa-icon {
+    color: $white-color;
     width: auto;
     height: 2rem;
     transition: 0.3s ease-in-out;
     &:hover {
-      color: $dark-color;
+      color: $logo-color;
     }
   }
 }

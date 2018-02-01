@@ -3,21 +3,12 @@
     v-scroll-reveal={ reset: true, viewFactor: 0.3 }
   )
     .col-12.text-center
-      h2
-        span(
-          v-for='(letter, index) in animatedTitle',
-          :style="'animation-delay: ' + index + '70ms;'"
-        ) {{ letter }}
+      h2 {{ titulo }}
 </template>
 <script>
 export default {
   name: 'mpTitle',
-  props: ['titulo'],
-  computed: {
-    animatedTitle () {
-      return this.titulo.split('')
-    }
-  }
+  props: ['titulo']
 }
 </script>
 <style lang="scss" scoped>
@@ -25,13 +16,6 @@ export default {
 
 h2 {
   letter-spacing: .5em;
-  span {
-    animation: jitter 200ms linear infinite;
-    color: $button-color;
-    display:inline-block
-  }
-}
-@keyframes jitter{ 
-  50%{transform:skewY(2deg) skewX(-2deg) scale(1.05);}
+  color: $button-color;
 }
 </style>

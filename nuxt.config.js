@@ -1,4 +1,3 @@
-const webpack = require('webpack')
 const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
@@ -19,14 +18,14 @@ module.exports = {
       { rel: 'apple-touch-icon', sizes: '114x114', href: '/apple-touch-icon-114x114.png' }
     ]
   },
-  // Analytics
   modules: [
-    ['@nuxtjs/google-analytics', { id: 'UA-113293096-1' }]
+    ['@nuxtjs/google-analytics', { id: 'UA-113293096-1' }],
+    ['bootstrap-vue/nuxt']
   ],
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#CCC214' },
+  loading: { color: '#FFA13C' },
   /*
   ** Build configuration
   */
@@ -34,27 +33,17 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    babel: {
-      presets: ['vue-app', 'stage-3']
-    },
     vendor: [
-      'jquery',
-      'bootstrap',
       'vue-awesome',
+      'vue-multiple-progress',
+      'vue-is-visible',
       '@tweenjs/tween.js',
       'scrollreveal',
       'vee-validate',
       'vue-notification'
     ],
-    plugins: [
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery'
-      })
-    ],
-    extend (config, ctx) {
-      if (ctx.dev && ctx.isClient) {
+    extend (config, { isDev, isClient, isServer }) {
+      if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -62,7 +51,7 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-      if (ctx.isServer) {
+      if (isServer) {
         config.externals = [
           nodeExternals({
             whitelist: [/es6-promise|\.(?!(?:js|json)$).{1,5}$/i, /^vue-awesome/]
@@ -71,13 +60,12 @@ module.exports = {
       }
     }
   },
-  css: ['bootstrap/dist/css/bootstrap.css'],
   plugins: [
-    { src: '~plugins/jquery.js', ssr: false },
-    { src: '~plugins/bootstrap.js', ssr: false },
     { src: '~plugins/vue-awesome.js', ssr: true },
-    { src: '~/plugins/vue-scroll-reveal.js', ssr: false },
-    { src: '~/plugins/vee-validate.js', ssr: true },
-    { src: '~/plugins/vue-notifications.js', ssr: false }
+    { src: '~plugins/vue-is-visible.js', ssr: false },
+    { src: '~plugins/vue-multiple-progress.js', ssr: false },
+    { src: '~plugins/vue-scroll-reveal.js', ssr: false },
+    { src: '~plugins/vee-validate.js', ssr: true },
+    { src: '~plugins/vue-notifications.js', ssr: false }
   ]
 }

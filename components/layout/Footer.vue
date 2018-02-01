@@ -1,5 +1,5 @@
 <template lang="pug">
-  .row
+  footer.row
     p.w-100.text-center.text-md-right © {{ year }}  Todos los derechos reservados | 
       span Luis Agapito 
 </template>
@@ -21,10 +21,10 @@ export default {
   height: 20px;
   p {
     margin-bottom: 0;
-    color: $dark-color;
+    color: $white-color;
     font-size: .9rem;
     span {
-      color: $secondary-color;
+      color: $logo-color;
     }
   }
 }
