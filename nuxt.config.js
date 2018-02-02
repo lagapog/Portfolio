@@ -13,7 +13,7 @@ module.exports = {
       { name: 'theme-color', content: "#093140" }
     ],
     link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Raleway' },
+      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Raleway' },
       { rel: 'shorcut icon', type: 'image/x-icon', href: 'favicon.ico' },
       { rel: 'apple-touch-icon', sizes: '57x57', href: '/apple-touch-icon-57x57.png' },
       { rel: 'apple-touch-icon', sizes: '114x114', href: '/apple-touch-icon-114x114.png' },
