@@ -31,6 +31,11 @@ module.exports = {
   /*
   ** Build configuration
   */
+  render: {
+    static: {
+      maxAge: 1000 * 60 * 60 * 24 * 7
+    }
+  },
   build: {
     /*
     ** Run ESLint on save
