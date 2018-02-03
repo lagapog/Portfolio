@@ -59,17 +59,17 @@ const createStore = () => {
           item: 1,
           name: 'High TechSchool',
           description: 'Página de una escuela secundaria',
-          image: 'http://aws-website-hightechschool-qnf7i.s3-website-us-east-1.amazonaws.com/images/slide2.jpg',
+          image: 'https://hightechschool.luisagapito.com/images/slide2.jpg',
           tags: ['Jquery', 'Bootstrap', 'ParticleJS'],
-          link: 'http://aws-website-hightechschool-qnf7i.s3-website-us-east-1.amazonaws.com/'
+          link: 'https://hightechschool.luisagapito.com'
         },
         {
           item: 2,
           name: 'Peru Travel',
           description: 'Página de empresa de turismo',
-          image: 'https://s3.amazonaws.com/aws-website-perutravel-3kq2b/images/split1.jpg',
+          image: 'https://perutravel.luisagapito.com/images/split1.jpg',
           tags: ['Javascript', 'Materialize'],
-          link: 'http://aws-website-perutravel-3kq2b.s3-website-us-east-1.amazonaws.com/'
+          link: 'https://perutravel.luisagapito.com'
         },
         {
           item: 3,
