@@ -2,8 +2,8 @@
   b-col.text-center.my-2(
     v-scroll-reveal={ reset: true, viewFactor: 0.4 },
     cols='12',
-    md='3',
-    xl='2'
+    md='4',
+    xl='3'
   )
     vue-is-visible(event="isVisible", @isVisible="setAnimatedPercent")
       h6 {{ name }}

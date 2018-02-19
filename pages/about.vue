@@ -2,25 +2,27 @@
 section#about
   mpTitle(titulo='ACERCA')
   mpDivRowAbout
+    img.profile(src='~/assets/images/profile.jpg')
+  mpDivRowAbout
     h1.text-center Luis Agapito, Desarrollador
     div.d-flex.justify-content-center
       h5.mr-3 Lima, Perú
       img.flag(src='~/assets/images/flag.jpg')
   mpDivRowAbout
     h3.my-3.text-center.text-lg-left Te cuento...
-    p.lead.text-justify Soy un desarrollador web. Me siento como pez en el agua 
-      span.text-auxiliar resolviendo problemas 
-      | y disfruto practicar el 
+    p.text-justify Mi nombre es Luis Agapito y soy un desarrollador. Disfruto de 
+      span.text-auxiliar resolver problemas 
+      | y  practicar el 
       span.text-auxiliar aprendizaje continuo
-      | , es por eso que amo lo que hago.
-    p.lead.text-justify Actualmente estoy cursando el segundo año de la carrera 
+      | . Por eso amo lo que hago.
+    p.text-justify Actualmente estoy cursando el segundo año de la carrera 
       | de Computación e Informática en el 
       a.text-auxiliar(href='https://www.cibertec.edu.pe/', target='_blank') Instituto Cibertec 
       | y soy un suscriptor activo en la plataforma virtual de aprendizaje 
       a.text-auxiliar(href='https://platzi.com', target='_blank') Platzi.
-    p.lead.text-justify En mis tiempos libres, si no estoy enganchado con alguna 
-      | serie o ánime, me gusta practicar fotografía y jugar fútbol 
-      | (no al mismo tiempo, obviamente)
+    p.text-justify En mis tiempos libres, me gusta salir a las calles y  
+      | practicar fotografía. Dan Brown, Richard Dawkins y Stephen Hawking 
+      | son de mis autores favoritos.
   mpSkills
   mpSocialNet
 </template>
@@ -43,7 +45,15 @@ export default {
 .flag {
   height: 1.2rem;
   width: auto;
-  display: block
+}
+.profile {
+  height: 12rem;
+  width: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  padding: 2px;
+  border: 2px solid $logo-color;
 }
 .text-auxiliar {
   text-decoration: none;

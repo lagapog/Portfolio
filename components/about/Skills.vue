@@ -1,7 +1,7 @@
 <template lang="pug">
 no-ssr
   b-row.my-4(align-v='center', align-h='center')
-    b-col.text-center.text-lg-left(cols='12')
+    b-col.text-center.text-lg-left(cols='12', offset-lg='2')
       h3.mb-4 Mis Habilidades
     mpProgress(
       v-for='s in skills',
