@@ -95,10 +95,11 @@ const createStore = () => {
         {item: 12, name: 'WORDPRESS', percent: '40'}
       ],
       socials: [
-        {item: 1, name: 'facebook', link: 'https://www.facebook.com/luisagapito.dev/'},
-        {item: 2, name: 'instagram', link: 'https://www.instagram.com/agapo91/'},
+        {item: 1, name: 'facebook', link: 'https://www.facebook.com/lagapog/'},
+        {item: 5, name: 'twitter', link: 'https://twitter.com/lagapog/'},
+        {item: 2, name: 'instagram', link: 'https://www.instagram.com/lagapog/'},
         {item: 3, name: 'linkedin', link: 'https://www.linkedin.com/in/luisagapito/'},
-        {item: 4, name: 'github', link: 'https://github.com/agapo91/'}
+        {item: 4, name: 'github', link: 'https://github.com/lagapog/'}        
       ],
       homeItemButton: {name: 'home', link: '/'}
     },
