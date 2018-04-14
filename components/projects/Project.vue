@@ -40,7 +40,7 @@ export default {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     bottom: 100%;
   }
   &-tags {

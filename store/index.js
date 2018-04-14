@@ -57,24 +57,32 @@ const createStore = () => {
       projects: [
         {
           item: 1,
+          name: 'Growl',
+          description: 'Tutorial sobre CSS Grid Layout',
+          image: 'https://s3.us-east-2.amazonaws.com/images.luisagapito.com/image-projects/Growl.svg',
+          tags: ['Vue', 'CSS Grid', 'Webpack'],
+          link: 'https://projects.luisagapito.com/Growl'
+        },
+        {
+          item: 2,
           name: 'High TechSchool',
-          description: 'Página de una escuela secundaria',
+          description: 'Escuela secundaria',
           image: 'https://hightechschool.luisagapito.com/images/slide2.jpg',
           tags: ['Jquery', 'Bootstrap', 'ParticleJS'],
           link: 'https://hightechschool.luisagapito.com'
         },
         {
-          item: 2,
+          item: 3,
           name: 'Peru Travel',
-          description: 'Página de empresa de turismo',
+          description: 'Página de  turismo',
           image: 'https://perutravel.luisagapito.com/images/split1.jpg',
           tags: ['Javascript', 'Materialize'],
           link: 'https://perutravel.luisagapito.com'
         },
         {
-          item: 3,
+          item: 4,
           name: 'Clock',
-          description: 'Blog sobre viajes en el tiempo',
+          description: 'Blog de viajes en el tiempo',
           image: 'https://raw.githubusercontent.com/agapo91/Clock/master/public/images/cover.jpg',
           tags: ['PHP', 'MySQL', 'Bootstrap'],
           link: 'https://github.com/agapo91/Clock'
@@ -85,14 +93,14 @@ const createStore = () => {
         {item: 2, name: 'CSS3', percent: '95'},
         {item: 3, name: 'SCSS/LESS', percent: '75'},
         {item: 4, name: 'JAVASCRIPT', percent: '80'},
-        {item: 5, name: 'JQUERY', percent: '75'},
+        {item: 5, name: 'JQUERY', percent: '80'},
         {item: 6, name: 'BOOTSRAP', percent: '95'},
         {item: 7, name: 'FOUNDATION', percent: '75'},
         {item: 8, name: 'VUE.JS', percent: '90'},
         {item: 9, name: 'SQL', percent: '65'},
-        {item: 10, name: 'REACT.JS', percent: '40'},
-        {item: 11, name: 'PHP', percent: '55'},
-        {item: 12, name: 'WORDPRESS', percent: '40'}
+        {item: 10, name: 'REACT.JS', percent: '50'},
+        {item: 11, name: 'PHP', percent: '75'},
+        {item: 12, name: 'WORDPRESS', percent: '50'}
       ],
       socials: [
         {item: 1, name: 'facebook', link: 'https://www.facebook.com/lagapog/'},
