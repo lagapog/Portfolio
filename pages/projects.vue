@@ -13,9 +13,6 @@ export default {
   components: { mpProject, mpTitle },
   computed: mapState([ 'projects' ]),
   transition: 'slide-up',
-  beforeCreate () {
-    this.$store.commit('setNotIndexMenu')
-  },
   mounted () {
     this.$store.commit('logoFinished')
   }

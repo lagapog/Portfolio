@@ -18,11 +18,19 @@ export default {
     'logoEnded',
     'menuView'
   ]),
+  middleware: 'setMenu',
   methods: {
     ...mapMutations([
       'setIndexMenu',
       'setNotIndexMenu'
-    ])
+    ]),
+    setMenu() {
+      if (this.$route.fullPath === '/') this.setIndexMenu()
+      else this.setNotIndexMenu()
+    }
+  },
+  created() {
+    this.setMenu()
   }
 }
 </script>

@@ -35,9 +35,6 @@ import mpTitle from '~/components/shared/Title.vue'
 export default {
   components: { mpSkills, mpSocialNet, mpTitle, mpDivRowAbout },
   transition: 'slide-right',
-  beforeCreate () {
-    this.$store.commit('setNotIndexMenu')
-  },
   mounted () {
     this.$store.commit('logoFinished')
   }

@@ -13,7 +13,7 @@ section#contact
         b-button.d-block.mx-auto.mx-lg-0.mb-4(variant='outline-primary') Enviar mensaje
       p.lead.text-center.text-lg-left ... o también puedes escribirme a mi correo personal 
         a(href='mailto:luisagapito.g@gmail.com', target='_blank') luisagapito.g@gmail.com  
-      h5.orange.d-lg-none.mt-0.text-center "Lo imposible no se espera, se crea."
+      h5.orange.d-lg-none.mb-5.text-center "Lo imposible no se espera, se crea."
       h3.orange.d-none.d-lg-block.mt-lg-5 "Lo imposible no se espera, se crea."
 </template>
 <script>
@@ -23,9 +23,6 @@ import mpTitle from '~/components/shared/Title.vue'
 export default {
   components: { mpTitle, mpDivRowContact },
   transition: 'slide-left',
-  beforeCreate () {
-    this.$store.commit('setNotIndexMenu')
-  },
   mounted () {
     this.$store.commit('logoFinished')
   }
@@ -33,6 +30,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '~assets/css/variables';
+
+section#contact {
+  min-height: calc(100vh - 60px);
+}
 
 img.rocket {
   width: 100%;
