@@ -3,25 +3,29 @@ section#contact
   mpTitle(titulo='CONTACTO')
   mpDivRowContact
     b-col(cols='12', lg='6')
-      p.lead ¿Tienes una idea o proyecto en mente? Puedes contar conmigo, 
+      p.lead.text-center.text-lg-left ¿Tienes una idea o proyecto en mente? Cuenta conmigo, 
         | Descríbeme que planeas hacer y to responderé a la brevedad. 
         | ¡No lo pienses más!
       img.rocket(src='~/assets/images/rocket.svg')
     b-col(cols='12', lg='6')
-      mpFormContact
-  mpDivRowContact
-    b-col(cols='12')
-      h4 ... o también puedes escribirme a mi correo personal 
-        a(href='mailto:luisagapito.g@gmail.com', target='_blank') luisagapito.g@gmail.com
+      p.lead.text-center.text-lg-left Puedes enviarme un mensaje vía WhatsApp con total confianza.
+      a(href='https://api.whatsapp.com/send?phone=51992778351&text=Hola%20Luis,%20qu%C3%A9%20tal?', target='_blank')
+        b-button.d-block.mx-auto.mx-lg-0.mb-4(variant='outline-primary') Enviar mensaje
+      p.lead.text-center.text-lg-left ... o también puedes escribirme a mi correo personal 
+        a(href='mailto:luisagapito.g@gmail.com', target='_blank') luisagapito.g@gmail.com  
+      h5.orange.d-lg-none.mt-0.text-center "Lo imposible no se espera, se crea."
+      h3.orange.d-none.d-lg-block.mt-lg-5 "Lo imposible no se espera, se crea."
 </template>
 <script>
-import mpFormContact from '~/components/contact/FormContact.vue'
 import mpDivRowContact from '~/components/contact/DivRowContact.vue'
 import mpTitle from '~/components/shared/Title.vue'
 
 export default {
-  components: { mpFormContact, mpTitle, mpDivRowContact },
+  components: { mpTitle, mpDivRowContact },
   transition: 'slide-left',
+  beforeCreate () {
+    this.$store.commit('setNotIndexMenu')
+  },
   mounted () {
     this.$store.commit('logoFinished')
   }
@@ -50,6 +54,9 @@ a {
   &:hover {
     color: $logo-color;
   }
+}
+.orange{
+  color: $logo-color;
 }
 @keyframes rocketear {
   0%{transform: translateY(0) rotate(0)}

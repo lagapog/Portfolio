@@ -9,35 +9,6 @@ const createStore = () => {
       showMenu: false,
       inputError: true,
       menuView: 'mpMenuIndex',
-      contactInputs: [
-        {
-          item: 1,
-          name: 'InputName',
-          label: 'Nombre y Apellidos',
-          alias: 'Nombre y Apellidos',
-          placeholder: 'Nombre y Apellidos',
-          icon: 'user',
-          validate: 'required|alpha_spaces'
-        },
-        {
-          item: 2,
-          name: 'InputEmail',
-          label: 'Correo electrónico',
-          alias: 'Correo electrónico',
-          placeholder: 'tucorreo@ejemplo.com',
-          icon: 'envelope',
-          validate: 'required|email'
-        },
-        {
-          item: 3,
-          name: 'InputPhone',
-          label: 'Número Telefónico (opcional)',
-          alias: 'Número Telefónico',
-          placeholder: '999-999-999',
-          icon: 'phone',
-          validate: 'numeric'
-        }
-      ],
       greetings: [
         {id: 1, text: 'Páginas web'},
         {id: 2, text: 'Responsive'},
@@ -89,18 +60,18 @@ const createStore = () => {
         }
       ],
       skills: [
-        {item: 1, name: 'HTML5', percent: '100'},
-        {item: 2, name: 'CSS3', percent: '95'},
-        {item: 3, name: 'SCSS/LESS', percent: '75'},
-        {item: 4, name: 'JAVASCRIPT', percent: '80'},
-        {item: 5, name: 'JQUERY', percent: '80'},
-        {item: 6, name: 'BOOTSRAP', percent: '95'},
-        {item: 7, name: 'FOUNDATION', percent: '75'},
-        {item: 8, name: 'VUE.JS', percent: '90'},
-        {item: 9, name: 'SQL', percent: '65'},
-        {item: 10, name: 'REACT.JS', percent: '50'},
-        {item: 11, name: 'PHP', percent: '75'},
-        {item: 12, name: 'WORDPRESS', percent: '50'}
+        {item: 1, name: 'HTML/CSS', percent: '100'},
+        {item: 2, name: 'SASS/LESS', percent: '95'},
+        {item: 3, name: 'JAVASCRIPT', percent: '85'},
+        {item: 4, name: 'JQUERY', percent: '85'},
+        {item: 5, name: 'BOOTSRAP', percent: '100'},
+        {item: 6, name: 'VUE/VUEX', percent: '95'},
+        {item: 7, name: 'REACT.JS', percent: '50'},
+        {item: 8, name: 'PHP', percent: '85'},
+        {item: 9, name: 'JAVA', percent: '80'},
+        {item: 10, name: 'ANDROID', percent: '75'},
+        {item: 11, name: 'WORDPRESS', percent: '70'},
+        {item: 12, name: 'SQL', percent: '85'}
       ],
       socials: [
         {item: 1, name: 'facebook', link: 'https://www.facebook.com/lagapog/'},

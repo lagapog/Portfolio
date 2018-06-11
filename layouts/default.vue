@@ -1,10 +1,5 @@
 <template lang="pug">
   b-container(fluid)
-    no-ssr
-      notifications(group='auth',
-        position='bottom right',
-        classes='vue-notification error'
-      )
     nuxt
     transition(name='menu-fade', mode='out-in')
       component(:is='menuView')
@@ -18,12 +13,6 @@ import mpFooter from '~/components/layout/Footer.vue'
 import { mapState, mapMutations } from 'vuex'
 
 export default {
-  created () {
-    this.setMenu()
-  },
-  beforeUpdate () {
-    this.setMenu()
-  },
   components: { mpMenuIndex, mpHomeButton, mpFooter },
   computed: mapState([
     'logoEnded',
@@ -33,11 +22,7 @@ export default {
     ...mapMutations([
       'setIndexMenu',
       'setNotIndexMenu'
-    ]),
-    setMenu () {
-      if (this.$route.fullPath === '/') this.setIndexMenu()
-      else this.setNotIndexMenu()
-    }
+    ])
   }
 }
 </script>

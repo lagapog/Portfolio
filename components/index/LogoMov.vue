@@ -12,8 +12,9 @@ export default {
   name: 'mpLogoMov',
   mounted () {
     const x = document.getElementById('shadow')
+    const vm = this
     x.addEventListener('animationend', () => {
-      this.$emit('finished')
+      vm.$emit('finished')
     })
   },
   beforeDestroy () {

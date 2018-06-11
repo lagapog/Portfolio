@@ -19,12 +19,12 @@ section#about
       | de Computación e Informática en el 
       a.text-auxiliar(href='https://www.cibertec.edu.pe/', target='_blank') Instituto Cibertec 
       | y soy un suscriptor activo en la plataforma virtual de aprendizaje 
-      a.text-auxiliar(href='https://platzi.com', target='_blank') Platzi.
+      a.text-auxiliar(href='https://platzi.com/@Agapo91', target='_blank') Platzi.
     p.text-justify En mis tiempos libres, me gusta salir a las calles y  
       | practicar fotografía. Dan Brown, Richard Dawkins y Stephen Hawking 
       | son de mis autores favoritos.
   mpSkills
-  mpSocialNet
+  mpSocialNet.mb-4
 </template>
 <script>
 import mpSkills from '~/components/about/Skills.vue'
@@ -35,6 +35,9 @@ import mpTitle from '~/components/shared/Title.vue'
 export default {
   components: { mpSkills, mpSocialNet, mpTitle, mpDivRowAbout },
   transition: 'slide-right',
+  beforeCreate () {
+    this.$store.commit('setNotIndexMenu')
+  },
   mounted () {
     this.$store.commit('logoFinished')
   }
