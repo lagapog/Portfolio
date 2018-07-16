@@ -32,7 +32,7 @@ const createStore = () => {
           description: 'Tutorial sobre CSS Grid Layout',
           image: 'https://s3.us-east-2.amazonaws.com/images.luisagapito.com/image-projects/Growl.svg',
           tags: ['Vue', 'CSS Grid', 'Webpack'],
-          link: 'https://projects.luisagapito.com/Growl'
+          link: 'https://growl.luisagapito.com'
         },
         {
           item: 2,
