@@ -44,11 +44,11 @@ const createStore = () => {
         },
         {
           item: 3,
-          name: 'Peru Travel',
-          description: 'Página de  turismo',
-          image: 'https://perutravel.luisagapito.com/images/split1.jpg',
+          name: 'Cconverter',
+          description: 'Convertir formatos de colores',
+          image: 'https://s3.us-east-2.amazonaws.com/images.luisagapito.com/image-projects/cconverter.svg',
           tags: ['Javascript', 'Materialize'],
-          link: 'https://perutravel.luisagapito.com'
+          link: 'https://cconverter.luisagapito.com'
         },
         {
           item: 4,
@@ -66,11 +66,11 @@ const createStore = () => {
         {item: 4, name: 'JQUERY', percent: '85'},
         {item: 5, name: 'BOOTSRAP', percent: '100'},
         {item: 6, name: 'VUE/VUEX', percent: '95'},
-        {item: 7, name: 'REACT.JS', percent: '50'},
+        {item: 7, name: 'REACT.JS', percent: '60'},
         {item: 8, name: 'PHP', percent: '85'},
         {item: 9, name: 'JAVA', percent: '80'},
         {item: 10, name: 'ANDROID', percent: '75'},
-        {item: 11, name: 'WORDPRESS', percent: '70'},
+        {item: 11, name: 'WORDPRESS', percent: '80'},
         {item: 12, name: 'SQL', percent: '85'}
       ],
       socials: [
