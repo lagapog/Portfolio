@@ -15,11 +15,9 @@ section#about
       | y  practicar el 
       span.text-auxiliar aprendizaje continuo
       | . Por eso amo lo que hago.
-    p.text-justify Actualmente estoy cursando el segundo año de la carrera 
-      | de Computación e Informática en el 
-      a.text-auxiliar(href='https://www.cibertec.edu.pe/', target='_blank') Instituto Cibertec 
-      | y soy un suscriptor activo en la plataforma virtual de aprendizaje 
-      a.text-auxiliar(href='https://platzi.com/@Agapo91', target='_blank') Platzi.
+    p.text-justify Actualmente trabajo como programador full stack 
+      | en la start-up 
+      a.text-auxiliar(href='https://www.legaly.pe/', target='_blank') Legaly.
     p.text-justify En mis tiempos libres, me gusta salir a las calles y  
       | practicar fotografía. Dan Brown, Richard Dawkins y Stephen Hawking 
       | son de mis autores favoritos.
